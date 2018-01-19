@@ -11,14 +11,14 @@ namespace Pruefung_Praktisch_Musterloesung.Controllers
     public class Lab3Controller : Controller
     {
 
-        /**
+		/**
         * 
         * #1 SQL Injection
-        *    Database SQL Cross Site Scripting
+        *    Missing Input Filtering & Validation (Text-Fields)
         * 
         * */
 
-        public ActionResult Index() {
+		public ActionResult Index() {
 
             Lab3Postcomments model = new Lab3Postcomments();
 
