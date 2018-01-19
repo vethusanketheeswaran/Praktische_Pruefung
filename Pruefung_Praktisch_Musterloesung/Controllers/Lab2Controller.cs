@@ -15,13 +15,30 @@ namespace Pruefung_Praktisch_Musterloesung.Controllers
     public class Lab2Controller : Controller
     {
 
-        /**
+		/**
         * 
-        * ANTWORTEN BITTE HIER
+        * #1 Cross Site Scripting
+        *    Clickjacking Attack
+        * 
+        * #2 Cross Site Scripting:
+        *    index.html-File erstellen
+             <script></script> - Tag vor dem </body> - Tags
+             «DOM» für Fake-Login erstellen (Input-Felder & Formular)
+             «Formular-Submit» Event erstellen
+             «AJAX» Routine vorbereiten, welche dann die «Credentials»
+             an einen Endpunkt (noch zu definieren) sendet.
+
+             Clickjacking Attack:
+             index.html File erstellen, welches z.B. digitec.ch, fleurope.ch etc.
+             via Iframe einbindet.
+             Loginform in Iframe erstellen, welches das original Formular
+             überblendet.
+             Submit des Logins abfangen und zum senden an Endpunkt
+             vorbereiten.
         * 
         * */
 
-        public ActionResult Index() {
+		public ActionResult Index() {
 
             var sessionid = Request.QueryString["sid"];
 
