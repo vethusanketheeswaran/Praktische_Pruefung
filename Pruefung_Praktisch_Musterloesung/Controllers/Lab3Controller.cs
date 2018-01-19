@@ -13,7 +13,8 @@ namespace Pruefung_Praktisch_Musterloesung.Controllers
 
         /**
         * 
-        * ANTWORTEN BITTE HIER
+        * #1 SQL Injection
+        *    Database SQL Cross Site Scripting
         * 
         * */
 
