@@ -21,7 +21,7 @@ namespace Pruefung_Praktisch_Musterloesung.Controllers
         *    Clickjacking Attack
         * 
         * #2 Cross Site Scripting:
-        *    index.html-File erstellen
+             index.html-File erstellen
              <script></script> - Tag vor dem </body> - Tags
              «DOM» für Fake-Login erstellen (Input-Felder & Formular)
              «Formular-Submit» Event erstellen
