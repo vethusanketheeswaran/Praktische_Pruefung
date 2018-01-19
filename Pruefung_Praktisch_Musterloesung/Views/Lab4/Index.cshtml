@@ -1,0 +1,38 @@
+﻿
+<div class="row">
+    <div class="col-md-12">
+        <br />
+        <legend>Aufgabe 4</legend>
+        <br />
+        <form action="~/Lab4/login" method="post" class="well" id="login_form">
+
+            <label>Username</label>
+            <input type="text" name="username" value="" class="form-control" />
+
+            <label>Password</label>
+            <input type="password" name="password" value="" class="form-control" />
+            <br />
+            <button type="submit" class="btn btn-primary">log in</button>
+
+        </form>
+
+        <b>Log of possible Intrusions</b>
+        <table class="table table-striped">
+            <tr>
+                <th>IP</th>
+                <th>Browser</th>
+                <th>Intrusion</th>
+                <th>When</th>
+            </tr>
+            @model List<List<string>>
+            @foreach (var item in Model) {
+            <tr>
+                <td>@item[0]</td>
+                <td>@item[1]</td>
+                <td>@item[2]</td>
+                <td>@item[3]</td>
+            </tr>
+            }
+        </table>
+    </div>
+</div>

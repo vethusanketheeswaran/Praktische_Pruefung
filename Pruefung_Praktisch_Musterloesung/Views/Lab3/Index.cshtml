@@ -1,0 +1,42 @@
+﻿
+<div class="row">
+    <div class="col-md-12">
+        <br />
+        <legend>Aufgabe 3</legend>
+        <br />
+        <form action="~/Lab3/login" method="post" class="well form-inline" id="login_form">
+
+            <a href="#">Menu1 </a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Menu2 </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Menu3 </a>
+            <div class="pull-right" style="display:inline-block;">
+                <label>Username</label>
+                <input type="text" name="username" value="" class="form-control" style="width:100px;" />
+
+                <label>Password</label>
+                <input type="password" name="password" value="" class="form-control" style="width:100px;" />
+
+                <button type="submit" class="btn btn-primary">log in</button>
+            </div>
+        </form>
+
+        <h4>Posts</h4>
+        @model List<List<string>>
+        @foreach (var item in Model)
+        {
+            <b>@item[1]</b><br />
+            <em>@item[2]</em>
+            <p>@Html.Raw(item[3])</p>
+            <b>Kommentare</b>
+            <p>@Html.Raw(item[4])</p>
+
+            <form action="~/Lab3/comment" method="post" class="form-inline" id="comment_form">
+                <input type="hidden" name="postid" value="@item[0]" />
+                <textarea name="comment" value="" class="form-control" ></textarea>
+
+                <button type="submit" class="btn btn-primary">comment </button>
+            </form>
+
+            <hr />
+         }
+
+    </div>
+</div>

@@ -1,0 +1,19 @@
+﻿
+<div class="row">
+    <div class="col-md-12">
+        <br />
+        <legend>Aufgabe 1</legend>
+        <br />
+        <a href="~/Lab1/index?type=lions" class="btn btn-primary">Show Lions</a> <a href="~/Lab1/index?type=elephants" class="btn btn-primary">Show Elephants</a>
+        <br /><br />
+
+        @model List<List<string>>
+        @foreach (var item in Model)
+        {
+        <a href="~/Lab1/Detail?file=@item[0]&type=@item[2]">
+            <img src="@item[1]" style="max-width:320px;margin-bottom:30px;border-radius:5px;" />
+        </a>
+        }
+
+    </div>
+</div>

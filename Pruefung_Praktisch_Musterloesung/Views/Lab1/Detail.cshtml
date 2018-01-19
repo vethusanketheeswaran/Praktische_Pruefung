@@ -1,0 +1,15 @@
+﻿
+<div class="row">
+    <div class="col-md-12">
+        <h2>Detailansicht Aufgabe 1</h2>
+
+        @model List<List<string>>
+        @foreach (var item in Model)
+        {
+         
+            <legend>File @item[0] </legend>
+            <img src="@item[1]" style="max-width:600px;margin-bottom:30px;border-radius:5px;" />
+           
+        }
+    </div>
+</div>
